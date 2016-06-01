@@ -45,7 +45,7 @@ angular.module('aurora.services', [])
 	};
 
 	var postToPushServer = function(params, onSuccess, onFailure) {
-		$http.post("http://aurora.cs.uaf.edu/notification_service", params)
+		$http.post('http://bumble5.net.gi.alaska.edu/notification_service', params)
 			.then(onSuccess || function(){}, onFailure || function(){});
 	};
 
