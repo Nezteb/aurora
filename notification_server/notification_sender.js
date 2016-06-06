@@ -136,7 +136,8 @@ Notifier.prototype.receivedResponse = function(self, response) {
         var data      = JSON.parse(body);
         var currentKp = Math.ceil(data.data[0].kp);
 
-        self.sendKpToClients(self, currentKp);
+        if(!isNaN(currentKp))
+            self.sendKpToClients(self, currentKp);
     });
 };
 
